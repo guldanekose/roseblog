@@ -1,0 +1,407 @@
+$rosePink: pink;
+
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1024px;
+
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        //login and register
+
+        .auth {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: $rosePink;
+
+            h1 {
+                font-size: 20px;
+                color: purple;
+                margin-bottom: 20px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                width: 200px;
+                background-color: white;
+                gap: 20px;
+            }
+
+            input {
+                border: none;
+                border-bottom: 1px solid gray;
+                padding: 10px;
+            }
+
+            button {
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                color: white;
+                background-color: purple;
+            }
+
+            p {
+                color: red;
+                font-size: 12px;
+                text-align: center;
+            }
+
+            span {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        //navbar
+        .navbar {
+            .container {
+                padding: 10px 0px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .logo {
+                    img {
+                        width: 150px;
+
+                    }
+                }
+
+                .links {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    h6 {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+
+                    span {
+                        cursor: pointer;
+                    }
+
+                    .write {
+                        cursor: pointer;
+                        background-color: $rosePink;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        font-weight: 300;
+                        border: 1px solid white;
+
+                        &:hover {
+                            background-color: white;
+                            color: purple;
+                            border: 1px solid purple;
+                        }
+                    }
+                }
+            }
+        }
+
+        //footer
+        footer {
+            margin-top: 100px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            background-color: $rosePink;
+            justify-content: space-between;
+            font-size: 14px;
+
+            img {
+                width: 120px;
+
+            }
+
+        }
+
+        //home
+        .home {
+            .posts {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 150px;
+
+                .post {
+                    display: flex;
+                    gap: 100px;
+
+                    &:nth-child(2n+1) {
+                        flex-direction: row-reverse;
+                    }
+
+                    .img {
+                        flex: 2;
+                        position: relative;
+
+                        &::after {
+                            height: 100%;
+                            width: 100%;
+                            content: "";
+                            background-color: $rosePink;
+                            position: absolute;
+                            top: 20px;
+                            left: -20px;
+                            z-index: -1;
+                        }
+
+
+                        img {
+                            max-height: 400px;
+                            width: 100%;
+                            object-fit: cover;
+
+                        }
+
+                    }
+
+                    .content {
+                        flex: 3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h1 {
+                            font-size: 48px;
+                        }
+
+                        p {
+                            font-size: 20px;
+                        }
+
+                        button {
+                            cursor: pointer;
+                            border: none;
+                            color: $rosePink;
+                            width: max-content;
+                            background-color: white;
+                            border: 1px solid $rosePink;
+                            padding: 10px 20px;
+
+                            &:hover {
+                                background-color: $rosePink;
+                                color: black;
+                                border: 1px solid white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //single
+
+        .single {
+            display: flex;
+            gap: 50px;
+
+            .content {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .user {
+                    margin-top: 5px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span:first-of-type {
+                        font-weight: bold;
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        line-height: 1.2;
+                    }
+
+                }
+
+                .edit {
+                    gap: 5px;
+                    display: flex;
+
+                    img {
+                        height: 30px;
+                        width: 30px;
+                        cursor: pointer;
+                    }
+                }
+
+                h1 {
+                    font-size: 45px;
+                    color: #333;
+                }
+
+                p {
+                    text-align: justify;
+                    line-height: 25px;
+                }
+            }
+
+            .menu {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                h1 {
+                    font-size: 20px;
+                    color: #555;
+                }
+
+                .post {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    img {
+                        height: 200px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                    h2 {
+                        color: #555;
+                    }
+
+                    button {
+                        cursor: pointer;
+                        border: none;
+                        color: $rosePink;
+                        width: max-content;
+                        background-color: white;
+                        border: 1px solid $rosePink;
+                        padding: 8px 16px;
+
+                        &:hover {
+                            background-color: $rosePink;
+                            color: black;
+                            border: 1px solid white;
+                        }
+                    }
+                }
+            }
+        }
+
+        //write
+        .add {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+
+            .content {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input {
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                }
+
+                .editorContainer {
+                    height: 300px;
+                    overflow: hidden;
+                    border: 1px solid lightgray;
+
+                    .editor {
+                        height: 100%;
+                        border: none;
+                    }
+                }
+
+            }
+
+            .menu {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item {
+                    flex: 1;
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 15px;
+                    color: #555;
+
+                    h1 {
+                        font-size: 20px;
+                    }
+
+                    .file {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        justify-content: space-between;
+
+                        :first-child {
+                            cursor: pointer;
+                            color: $rosePink;
+                            border: 1px solid $rosePink;
+                            background-color: white;
+                            padding: 5px 10px;
+                        }
+
+                        :last-child {
+                            cursor: pointer;
+                            color: white;
+                            border: 1px solid white;
+                            background-color: $rosePink;
+                            padding: 5px 10px;
+                        }
+                    }
+                    .cat{
+                        display: flex;
+                        align-items: center;
+                        color:$rosePink;
+                        gap: 3px;
+
+                    }
+                }
+
+            }
+        }
+    }
+}
