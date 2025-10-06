@@ -210,7 +210,7 @@ $rosePink: pink;
 
         .single {
             display: flex;
-            gap: 50px;
+            gap: 100px;
 
             .content {
                 flex: 5;
@@ -245,7 +245,7 @@ $rosePink: pink;
                     .info {
                         display: flex;
                         flex-direction: column;
-                        line-height: 1.2;
+                        line-height: 1.5;
                     }
 
                 }
@@ -255,8 +255,8 @@ $rosePink: pink;
                     display: flex;
 
                     img {
-                        height: 30px;
-                        width: 30px;
+                        height: 25px;
+                        width: 25px;
                         cursor: pointer;
                     }
                 }
@@ -392,10 +392,11 @@ $rosePink: pink;
                             padding: 5px 10px;
                         }
                     }
-                    .cat{
+
+                    .cat {
                         display: flex;
                         align-items: center;
-                        color:$rosePink;
+                        color: $rosePink;
                         gap: 3px;
 
                     }
